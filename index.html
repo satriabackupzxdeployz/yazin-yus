@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="ImgDrop is a fast image hosting service. Upload image to URL, get direct image link instantly. Supports JPG, PNG, GIF, WEBP, SVG, BMP, ICO, TIFF." name="description"/>
+<meta content="image hosting, upload image, image to URL, image to link, image CDN, host image online, direct image link, imgdrop" name="keywords"/>
+<meta content="ImgDrop" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://imgdrop.web.id" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://imgdrop.web.id" property="og:url"/>
+<meta content="ImgDrop â Image Hosting &amp; Upload Image to URL" property="og:title"/>
+<meta content="Upload your images and get a direct link instantly. Fast image hosting at imgdrop.web.id" property="og:description"/>
+<meta content="https://imgdrop.web.id/source/og-image.jpg" property="og:image"/>
+<meta content="ImgDrop" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://imgdrop.web.id" name="twitter:url"/>
+<meta content="ImgDrop â Image Hosting" name="twitter:title"/>
+<meta content="Upload images and get a direct link. Fast and simple to use." name="twitter:description"/>
+<meta content="https://imgdrop.web.id/source/og-image.jpg" name="twitter:image"/>
+<link href="source/fav.png" rel="icon" type="image/svg+xml"/>
+<link href="resources/r0002_c480de3b.jpg" rel="shortcut icon"/>
+<link href="resources/r0002_c480de3b.jpg" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<meta content="#1a1a2e" name="theme-color"/>
+<script src="js/script_1.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="resources/r0012_086a5405.css" rel="stylesheet"/>
+<link href="resources/r0021_814e966d.css" rel="stylesheet"/>
+<link href="resources/r0022_ea7d9312.css" rel="stylesheet"/>
+</head>
+<body>
+<div aria-hidden="true" class="bg-grid"></div>
+<div aria-hidden="true" class="bg-glow"></div>
+<nav class="navbar" role="banner">
+<div class="nav-inner">
+<a aria-label="ImgDrop Home" class="logo" href="/">
+<img alt="Logo" class="logo-img" src="resources/r0001_544d6680.png"/>
+<span class="logo-text">Image<span class="logo-accent">Drop</span></span>
+</a>
+<button aria-label="Menu" class="hamburger" id="hamburgerBtn">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="nav-menu" id="navMenu">
+<a class="nav-link" href="#" id="contactLink">Contact</a>
+<a class="nav-link" href="#" id="donationLink">Donation</a>
+</div>
+</div>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="contact-modal" id="contactModal">
+<div class="contact-modal-content">
+<button class="contact-modal-close" id="closeModalBtn">×</button>
+<h2>Contact</h2>
+<p>You can contact me via:</p>
+<p><strong><a class="__cf_email__" data-cfemail="25464a4b5144465165575c5f444d404b0b564c5140" href="/cdn-cgi/l/email-protection">[email protected]</a></strong></p>
+<div class="contact-note">
+<p>Please note:</p>
+<ul>
+<li>I cannot delete images upon request unless they violate the Terms of Service</li>
+<li>Avoid uploading personal, private, or sensitive content</li>
+<li>For legitimate concerns only, feel free to reach out via email</li>
+</ul>
+</div>
+</div>
+</div>
+<header class="hero" role="main">
+<h1 class="hero-title">Upload Image,<br/><span class="hero-gradient">Get Direct Link.</span></h1>
+<p class="hero-sub">Upload your image. Get a direct link. Share anywhere.</p>
+</header>
+<main class="container">
+<section aria-label="Upload Image" class="glass-card upload-card">
+<div aria-label="Click or drag image here to upload" class="dropzone" id="dropzone" role="button" tabindex="0">
+<input accept="image/jpeg,image/jpg,image/png,image/gif,image/webp,image/svg+xml,image/bmp,image/x-icon,image/tiff" aria-label="Select image file" class="file-input" id="file-input" type="file"/>
+<div class="dz-content" id="dz-default">
+<div class="dz-icon-wrap">
+<div class="dz-icon-ring"></div>
+<i class="fa-solid fa-cloud-arrow-up dz-icon"></i>
+</div>
+<p class="dz-title">Drop your image here</p>
+<p class="dz-sub">or <span class="dz-browse">browse files</span></p>
+<div class="dz-formats">
+<span>JPG</span><span>PNG</span><span>GIF</span><span>WEBP</span><span>SVG</span><span>BMP</span><span>ICO</span><span>TIFF</span>
+</div>
+</div>
+<div class="dz-preview hidden" id="dz-preview">
+<img alt="Preview" class="preview-img" id="preview-img" src=""/>
+<div class="preview-meta">
+<p class="preview-name" id="preview-name">filename.jpg</p>
+<p class="preview-size" id="preview-size">0 MB</p>
+</div>
+<button aria-label="Remove file" class="preview-clear" id="preview-clear"><i class="fa-solid fa-xmark"></i></button>
+</div>
+</div>
+<div class="constraints-text">
+<p>Simply choose an image from your device, and we'll generate a shareable link for you in seconds. No registration needed.</p>
+<p>Maximum file size: <strong style="font-weight: 700;">30 MB</strong>.</p>
+</div>
+<button aria-label="Upload image" class="btn-primary" disabled="" id="upload-btn">
+<span id="btn-label"><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload Now</span>
+<span class="hidden" id="btn-loading"><i class="fa-solid fa-circle-notch fa-spin"></i> Uploadingâ¦</span>
+</button>
+<div aria-live="polite" class="progress-wrap hidden" id="progress-wrap">
+<div class="progress-bar-track">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar" id="progress-bar" role="progressbar" style="width:0%"></div>
+</div>
+<span class="progress-pct" id="progress-pct">0%</span>
+</div>
+<div aria-live="polite" class="result-card hidden" id="result-card">
+<div class="result-header">
+<span class="result-icon"><i class="fa-solid fa-circle-check"></i></span>
+<span class="result-title">Upload Successful!</span>
+</div>
+<div class="result-url-wrap">
+<input aria-label="Image URL" class="result-url" id="result-url" readonly="" type="text"/>
+<button aria-label="Copy URL" class="btn-copy" id="copy-btn" onclick="copyResult()">
+<i class="fa-regular fa-copy"></i>
+</button>
+</div>
+<div class="result-actions">
+<button class="btn-outline" onclick="copyResult()"><i class="fa-regular fa-copy"></i> Copy Link</button>
+<a class="btn-outline" href="#" id="open-link" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Image</a>
+<button class="btn-outline" onclick="resetUploader()"><i class="fa-solid fa-rotate"></i> Upload Another</button>
+</div>
+</div>
+</section>
+<section aria-label="Frequently Asked Questions" class="glass-card faq-card">
+<div class="section-header">
+<i class="fa-solid fa-circle-question"></i>
+<div>
+<h2>Frequently Asked Questions</h2>
+<p>How to use ImgDrop and common questions</p>
+</div>
+</div>
+<div class="faq-list">
+<details class="faq-item">
+<summary class="faq-q">How do I upload an image?</summary>
+<div class="faq-a">Click the upload area or drag and drop your image, then press "Upload Now". Once done, you'll get a direct link to copy and share.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">What image types are supported?</summary>
+<div class="faq-a">We support JPG, PNG, GIF, WEBP, SVG, BMP, ICO, and TIFF formats.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Can anyone see my uploaded images?</summary>
+<div class="faq-a">Yes. Images are publicly accessible via the direct link. Do not upload private or sensitive content.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">How do I report a violation?</summary>
+<div class="faq-a">Contact us at <strong><a class="__cf_email__" data-cfemail="c6a5a9a8b2a7a5b286b4bfbca7aea3a8e8b5afb2a3" href="/cdn-cgi/l/email-protection">[email protected]</a></strong> with the image URL and details of your concern.</div>
+</details>
+</div>
+</section>
+</main>
+<footer class="footer" role="contentinfo">
+<p>Â© 2026 <strong>ImgDrop</strong> Image Hosting at <a href="https://imgdrop.web.id" rel="noopener">imgdrop.web.id</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+</footer>
+<div aria-live="assertive" class="toast" id="toast" role="alert"></div>
+<script data-cfasync="false" src="resources/r0023_ca816da6.js"></script><script defer="" src="resources/r0024_d59b3557.js"></script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"acf468eec9ad49d6b4f5f25c83e60ccd","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" src="resources/r0025_ddbc44f9.js"></script>
+</body>
+</html>
